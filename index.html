@@ -13,17 +13,40 @@
     />
 
     <title>Frontend Mentor | Product preview card component</title>
-
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <section>
+        <div class="m-img">
+          <img src="images/image-product-desktop.jpg" alt="" />
+        </div>
+        <div class="info">
+          <header>
+            <h4>perfume</h4>
+            <h2>gabrielle essence eau de parfum</h2>
+          </header>
+          <section>
+            <p>
+              a florat, solar and voluptuous interpretation composed by olivier
+              ploge, perfumer. creator for the house of <b>chanel</b>
+            </p>
+          </section>
+          <footer>
+            <div class="price">
+              <h2>$149.99</h2>
+              <del>$169.99</del>
+            </div>
+            <button>
+              <i class="fa-solid fa-cart-shopping"></i> add to cart
+            </button>
+          </footer>
+        </div>
+      </section>
+    </div>
+  </body>
 </html>

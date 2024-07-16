@@ -2,3 +2,199 @@
 - Dark grayish blue: hsl(228, 12%, 48%)
 - White: hsl(0, 0%, 100%)
 - Font size (paragraph): 14px */
+/* - Dark cyan: hsl(158, 36%, 37%)
+- Cream: hsl(30, 38%, 92%) */
+
+:root {
+    --border-radius: 8px;
+    --bg-color: #fff;
+    --bg-body: hsl(30, 38%, 92%);
+    --btn-color: hsl(158, 36%, 37%);
+    --text-color: #9b9191;
+    --font-size: 2rem;
+    --timming: 0.3s;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bg-body);
+}
+
+.container {
+    transform: translateY(30%);
+    -webkit-transform: translateY(30%);
+    -moz-transform: translateY(30%);
+    -ms-transform: translateY(30%);
+    -o-transform: translateY(30%);
+    background-color: var(--bg-color);
+    border-radius: var(--border-radius);
+    -webkit-border-radius: var(--border-radius);
+    -moz-border-radius: var(--border-radius);
+    -ms-border-radius: var(--border-radius);
+    -o-border-radius: var(--border-radius);
+}
+
+@media (max-width: 767px) {
+    .container {
+        margin: 0 20px;
+        transform: translateY(10%);
+        -webkit-transform: translateY(10%);
+        -moz-transform: translateY(10%);
+        -ms-transform: translateY(10%);
+        -o-transform: translateY(10%);
+        border-top-left-radius: var(--border-radius);
+        border-top-right-radius: var(--border-radius);
+    }
+}
+
+.container>section {
+    display: flex;
+    max-height: 50vh;
+    max-width: 80vh;
+    background-color: var(--bg-color);
+}
+
+@media (max-width: 767px) {
+    .container>section {
+        flex-direction: column;
+        height: fit-content;
+    }
+}
+
+.container section .m-img {
+    background-image: url('./images/image-product-desktop.jpg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    flex: 1;
+}
+
+.container section .m-img img {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    border-top-left-radius: var(--border-radius);
+    border-bottom-left-radius: var(--border-radius);
+}
+
+@media (max-width: 767px) {
+
+    .container section .m-img img,
+    .container section .m-img {
+        border-top-left-radius: var(--border-radius);
+        border-top-right-radius: var(--border-radius);
+    }
+}
+
+.container section .info {
+    flex: 1;
+    padding: 20px;
+    background-color: var(--bg-color);
+}
+
+.container section .info header h4 {
+    text-transform: uppercase;
+    color: var(--text-color);
+    font-weight: 700;
+}
+
+.container section .info header h2 {
+    text-transform: capitalize;
+    font-weight: 700;
+    font-size: var(--font-size);
+    margin: 10px 0;
+}
+
+.container section .info section p {
+    text-transform: capitalize;
+    color: var(--text-color);
+}
+
+.container section .info section p b {
+    text-transform: uppercase;
+}
+
+footer {
+    margin: 30px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .price {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 767px) {
+    footer .price {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+    }
+}
+
+footer .price h2 {
+    color: var(--btn-color);
+    font-size: var(--font-size);
+    margin-right: 20px;
+}
+
+footer .price del {
+    color: var(--text-color);
+}
+
+footer button {
+    display: flex;
+    align-items: center;
+    padding: 10px 30px;
+    width: 80%;
+    background-color: var(--btn-color);
+    color: var(--bg-color);
+    border: none;
+    outline: none;
+    justify-content: center;
+    text-transform: capitalize;
+    cursor: pointer;
+    font-weight: 700;
+    border-radius: var(--border-radius);
+    -webkit-border-radius: var(--border-radius);
+    -moz-border-radius: var(--border-radius);
+    -ms-border-radius: var(--border-radius);
+    -o-border-radius: var(--border-radius);
+    transition: var(--timming);
+    -webkit-transition: var(--timming);
+    -moz-transition: var(--timming);
+    -ms-transition: var(--timming);
+    -o-transition: var(--timming);
+}
+
+footer button:hover {
+    background-color: var(--bg-color);
+    color: var(--btn-color);
+}
+
+@media (max-width: 767px) {
+    footer button {
+        width: 100%;
+        padding: 15px 30px;
+        font-size: 1.5rem;
+    }
+}
+
+footer button i {
+    margin-right: 10px;
+}
